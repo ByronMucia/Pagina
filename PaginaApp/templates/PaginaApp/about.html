@@ -1,0 +1,78 @@
+{%  extends "PaginaApp/index.html" %}
+
+{%load static %}
+
+{% block content %}
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">Conocenos</h5>
+                        <h1 class="mb-0">Institución</h1>
+                    </div>
+                    <p class="mb-4">La Facultad de Ingeniería se dedica a la formación de profesionales de prestigio, cuyos conocimientos contribuyen al progreso científico y tecnológico de Guatemala.
+
+ 
+
+                        En esta unidad académica se desempeñan seis escuelas facultativas de pregrado que disponen de doce carreras, una escuela de postgrado con carácter regional centroamericano; además, del Centro de Investigaciones de Ingeniería (CII), de manera que su proyección es amplia hacia diversas actividades económicas y sociales del país.</p>
+                        <h1 class="mb-0"> Mision</h1>
+                    
+                    <p class="mb-2"> Formar profesionales en las distintas áreas de la Ingeniería que, a través de la aplicación de la ciencia y la tecnología, conscientes de la realidad nacional y regional, y comprometidos con nuestras sociedades, sean capaces de generar soluciones que se adapten a los desafíos del desarrollo sostenible y los retos del contexto global.</p>
+                        <h1 class="mb-0"> Visión</h1>
+                    
+                    <p class="mb-2"> Ser una institución académica con incidencia en la solución de la problemática nacional; formamos profesionales en las distintas áreas de la ingeniería, con sólidos conceptos científicos, tecnológicos, éticos y sociales, fundamentados en la investigación y promoción de procesos innovadores orientados hacia la excelencia profesional.</p>
+                        <h1 class="mb-0"> Objetivo Principal</h1>
+                    
+                    <p class="mb-2"> Formar el recurso humano dentro del área técnico-científica que necesita el desarrollo de Guatemala, dentro del ambiente físico, natural, social, económico, antropológico y cultural del medio que lo rodea, para que pueda servir al país en forma eficiente y eficaz como profesional de la ingeniería.</p>
+                    
+                        <h1 class="mb-0"> Objetivos Especificos</h1>
+                        <ul>
+                            <li>Proporcionar, al estudiantado de la Facultad de Ingeniería las oportunidades para obtener una formación técnico-científica, para su aplicación al medio laboral y adaptación a la tecnología moderna.</li>
+                            <li>Fomentar la investigación científica y el desarrollo de la tecnología y ciencias entre los estudiantes y catedráticos de la Facultad de Ingeniería, con proyección y como resarcimiento para el pueblo de Guatemala.</li>
+                            <li>Fortalecer las relaciones con los sectores externos del país, que se vinculan con las diversas ramas de la ingeniería y contribuir a satisfacer sus necesidades, lo cual generará el beneficio mutuo.</li>
+                          </ul>
+
+                          <h1 class="mb-0"> Estrategias Académicas</h1>
+                          <ul>
+                              <li>Estructurar una programación adecuada que cubra el conocimiento teórico y la aplicación de las disciplinas básicas de la ingeniería.</li>
+                              <li>Utilizar métodos de enseñanza-aprendizaje que estén en consonancia con el avance acelerado de la ciencia y la tecnología.</li>
+                              <li>Proporcionar al estudiantado la experiencia práctica de las situaciones problemáticas que encontrará en el ejercicio de su profesión.</li>
+                            </ul>  
+                    
+                        
+                    <div class="row g-0 mb-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Autoaprendizaje</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Disciplina</h5>
+                        </div>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i> Liderazgo</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Creatividad</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Telefóno para Dudas</h5>
+                            <h4 class="text-primary mb-0">+502 24189100</h4>
+                        </div>
+                    </div>
+                    <a href="{% url 'Service' %}" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Servicios</a>
+                </div>
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/about.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    {% endblock %}
