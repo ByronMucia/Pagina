@@ -45,7 +45,7 @@ def feature(request):
 
 def team(request):
     
-    return render(request,"PaginaAPP/team.html")
+    return render(request,"PaginaApp/team.html")
 
 def testimonial(request):
     
@@ -53,6 +53,12 @@ def testimonial(request):
 
 def quote(request):
     
-    return render(request,"PaginaAPP/quote.html")
+    return render(request,"PaginaApp/quote.html")
+
+
+
+
+
+
 
 

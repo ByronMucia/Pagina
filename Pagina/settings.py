@@ -9,6 +9,11 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+import os
+from .juzzmin import JAZZMIN_SETTINGS
+
+from django.contrib.messages import constants as mensajes_de_error
+
 
 from pathlib import Path
 
@@ -31,6 +36,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -38,6 +44,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "PaginaApp",
+    "autenticacion",
+    "crispy_forms",
+    'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +85,12 @@ WSGI_APPLICATION = "Pagina.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "AlumnosRegistro",
+        "USER": "postgres",
+        "PASSWORD": "proyectos2023",
+        "HOST": "localhost",
+        "DATABASE_PORT":"5432",
     }
 }
 
@@ -122,3 +135,20 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap4'
+
+MESSAGE_TAGS={
+    
+    mensajes_de_error.DEBUG: 'debug',
+    mensajes_de_error.INFO: 'info',
+    mensajes_de_error.SUCCESS: 'success',
+    mensajes_de_error.WARNING: 'warning',
+    mensajes_de_error.ERROR: 'error',
+}
+
+JAZZMIN_SETTINGS=JAZZMIN_SETTINGS
+
+AUTH_USER_MODEL = 'autenticacion.PerfilUsuario'
