@@ -1,0 +1,15 @@
+
+{%load static %}
+
+{% block content %}
+
+<div class="container">
+    <h2>Cursos Disponibles</h2>
+    <ul>
+        {% for curso in cursos %}
+            <li>{{ curso.titulo }} - {{ curso.descripcion }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

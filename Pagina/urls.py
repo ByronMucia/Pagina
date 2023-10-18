@@ -22,5 +22,8 @@ urlpatterns = [
     
     path("autenticacion/",include("autenticacion.urls")),
     
+    path("cursos/",include("cursos.urls")),
+    
+    
     path("", include("PaginaApp.urls")),
 ]

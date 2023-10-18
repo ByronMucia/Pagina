@@ -1,11 +1,13 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
+
 class PerfilUsuario(AbstractUser):
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
     dpi = models.CharField(max_length=20)
-    fecha_nacimiento = models.DateField()
+    fecha_nacimiento = models.DateField(null=True, blank=True)
     telefono = models.CharField(max_length=15)
     email = models.EmailField(max_length=254, unique=True)
     password = models.CharField(max_length=128, default='valor_predeterminado')
@@ -37,3 +39,4 @@ class PerfilUsuario(AbstractUser):
 
     def __str__(self):
         return self.username
+

@@ -11,6 +11,6 @@ urlpatterns = [
     
     path("logear",logear, name="logear"),
     
-     path('registro/', VRegistro.as_view(), name='registro'),
+    path('registro/', VRegistro.as_view(), name='registro'),
     
 ]

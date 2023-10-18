@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     "autenticacion",
     "crispy_forms",
     'crispy_bootstrap4',
+    "cursos",
+    
 ]
 
 MIDDLEWARE = [
@@ -151,4 +153,4 @@ MESSAGE_TAGS={
 
 JAZZMIN_SETTINGS=JAZZMIN_SETTINGS
 
-AUTH_USER_MODEL = 'autenticacion.PerfilUsuario'
+AUTH_USER_MODEL = 'auth.user'

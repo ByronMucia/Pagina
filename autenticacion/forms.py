@@ -27,3 +27,10 @@ class RegistroForm(UserCreationForm):
         if commit:
             user.save()
         return user
+    
+class SuperusuarioForm(UserCreationForm):
+    fecha_nacimiento = forms.DateField(required=False, help_text="Fecha de nacimiento (opcional)")
+    
+    class Meta:
+        model = PerfilUsuario
+        fields = ('username', 'email', 'password1', 'password2', 'fecha_nacimiento')    
