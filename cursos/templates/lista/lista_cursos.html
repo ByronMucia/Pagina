@@ -10,6 +10,13 @@
             <li>{{ curso.titulo }} - {{ curso.descripcion }}</li>
         {% endfor %}
     </ul>
+    <h1>Mis Cursos</h1>
+    <ul>
+        {% for resultado in resultados %}
+            <li>{{ resultado.0 }} - {{ resultado.1 }}</li>
+        {% endfor %}
+    </ul>
+</ul>
 </div>
 
 {% endblock %}

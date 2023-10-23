@@ -2,6 +2,9 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .forms import CursoForm
 from cursos.models import Curso
+from django.db import connection
+
+
 
 @login_required
 def crear_curso(request):
@@ -21,4 +24,4 @@ def crear_curso(request):
 def lista_cursos(request):
     cursos = Curso.objects.all()  # Obtén la lista de cursos disponibles
     context = {'cursos': cursos}
-    return render(request, 'lista/lista_cursos.html', context)
+    return render(request, 'lista/lista_cursos.html', context) 

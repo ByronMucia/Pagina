@@ -2,6 +2,7 @@ from django.urls import path
 
 from .views import VRegistro, cerrar_sesion, logear
 from .views import VRegistro
+from .views import Administrador
 
 urlpatterns = [
     
@@ -12,5 +13,7 @@ urlpatterns = [
     path("logear",logear, name="logear"),
     
     path('registro/', VRegistro.as_view(), name='registro'),
+    
+    path('admin/', Administrador, name='administrador'),
     
 ]

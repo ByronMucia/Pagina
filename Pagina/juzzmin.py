@@ -24,10 +24,10 @@ JAZZMIN_SETTINGS = {
     "site_icon": None,
 
     # Welcome text on the login screen
-    "welcome_sign": "Welcome to the library",
+    "welcome_sign": "Bienvenido Academia",
 
     # Copyright on the footer
-    "copyright": "Acme Library Ltd",
+    "copyright": "Academia Usac",
 
     # List of model admins to search from the search bar, search bar omitted if excluded
     # If you want to use a single search field you dont need to use a list, you can use a simple string 
@@ -44,10 +44,10 @@ JAZZMIN_SETTINGS = {
     "topmenu_links": [
 
         # Url that gets reversed (Permissions can be added)
-        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"name": "Inicio",  "url": "admin:index", "permissions": ["auth.view_user"]},
 
         # external url that opens in a new window (Permissions can be added)
-        {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
+        {"name": "Soporte", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
 
         # model admin to link to (Permissions checked against model)
         {"model": "auth.User"},

@@ -20,10 +20,15 @@ from django.urls import path,include
 urlpatterns = [
     path("admin/", admin.site.urls),
     
+    path("blog/",include("asingatura.urls")),
+    
     path("autenticacion/",include("autenticacion.urls")),
     
     path("cursos/",include("cursos.urls")),
     
+    path("carro/",include("carro.urls")),
+    
+    path('pedidos/', include('pedidos.urls')),  
     
     path("", include("PaginaApp.urls")),
 ]

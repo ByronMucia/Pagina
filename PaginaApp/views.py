@@ -1,8 +1,11 @@
 from django.shortcuts import render, HttpResponse
+from carro.carro import Carro
 
 # Create your views here.
 
 def home(request):
+    
+    carro=Carro(request)
     
     return render(request,"PaginaApp/index.html")
 
@@ -25,9 +28,9 @@ def pages(request):
     
     return render(request,"PaginaAPP/pages.html")
 
-def blog(request):
+#def blog(request):
     
-    return render(request,"PaginaAPP/blog.html")
+ #   return render(request,"PaginaAPP/blog.html")
 
 def detail(request):
     

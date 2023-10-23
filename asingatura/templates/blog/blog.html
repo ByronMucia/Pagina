@@ -1,0 +1,65 @@
+{%  extends "PaginaApp/index.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+
+  <div style="float:right;"> 
+   <!--<p style="color: red ;" > total: {{importe_total_carro}}$</p>   --> 
+
+    {% if request.user.is_authenticated %}
+ 
+      {% include "carro/widget.html" %}
+
+    {% else %} 
+
+      <div class="alert alert-danger text-center">Login para ver Carro</div>     
+
+    {% endif %}
+    
+
+  
+  </div>
+
+
+  <div class="row">
+
+{% for asignatura in asignaturas %}
+
+    <div class="col-md-3">
+
+    <div class="card" style="width: 100%; margin: 5px 5px;">
+
+        <img src="{{ MEDIA_URLS }}{{ media.imagen.url }}" class="card-img-top">
+
+        <div class="card-body" style="text-align: center;">
+
+            <h7 class="card-title">{{asignatura.nombre}}</h7>
+
+            <p class="card-text">{{asignatura.precio}}&nbsp;€</p>
+
+
+        </div> 
+        
+        <div class="card-footer text-center">
+
+            <a href="{% url 'carro:agregar' asignatura.id %}" class="btn btn-success">Asignarse</a>
+
+
+        </div>
+
+    </div><!--card que se cierra-->
+    
+  </div>
+
+
+
+{% endfor %}
+  </div>
+ 
+  
+</div>
+
+{% endblock %}

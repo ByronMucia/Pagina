@@ -86,16 +86,20 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Estudiantes</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{% url 'lista_cursos' %}" class="dropdown-item">Cursos</a>
+                            <a href="{% url 'lista_cursos' %}" class="dropdown-item">Cursos</a> 
                             <a href="{% url 'Autenticacion' %}" class="dropdown-item">  
                                 
                                 {% if user.is_authenticated %}
                            
-                                Hola {{ user.username }} &nbsp;&nbsp;<a href = "{% url 'cerrar_sesion' %}" style= "color: black; text-align: center; display: block;margin: 0 auto;" >Cerrar Sesion</a>
+                                @ {{ user.username }} &nbsp;&nbsp;<a href = "{% url 'cerrar_sesion' %}" style="color: black; text-align: center; display: block; margin: 0 auto;" >Cerrar Sesion</a>
 
                                 {% else %}
-    
-                                <a href="{% url 'logear' %}"">Login</a> &nbsp; &nbsp; <a href="{% url 'Autenticacion' %}">Registrate</a>
+                                    <div> 
+                                        <a href="{% url 'logear' %}"">Login</a>
+                                    </div>
+                                    <div style="display: flex; align-items: center;">
+                                        <a href="{% url 'Autenticacion' %}">Registrate</a>
+                                    </div>
     
                                 {% endif %}
                             </a>
@@ -104,15 +108,15 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Administrativo</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{% url 'Price' %}" class="dropdown-item">Docente</a>
-                            <a href="{% url 'Feature' %}" class="dropdown-item">UEDI</a>
+                            <a href="{% url 'administrador' %}" class="dropdown-item">Docente</a>
+                            <a href="{% url 'administrador' %}" class="dropdown-item">Administación</a>
                             <a href="{% url 'Testimonial' %}" class="dropdown-item">Escuelas</a>
                         </div>
                     </div>
                     <a href="{% url 'Contacto' %}" class="nav-item nav-link">Contacto</a>
                 </div>
                 <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-                <a href="{% url 'Autenticacion' %}" class="btn btn-primary py-2 px-4 ms-3"> Registrarse  </a>
+                <a href="{% url 'Blog' %}" class="btn btn-primary py-2 px-4 ms-3"> Asignaturas  </a>
             </div>
         </nav>
 

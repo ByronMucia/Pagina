@@ -5,3 +5,4 @@ class CursoForm(forms.ModelForm):
     class Meta:
         model = Curso
         fields = ['titulo', 'descripcion']
+        

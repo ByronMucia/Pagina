@@ -3,6 +3,10 @@ from django.views.generic import View
 from django.contrib.auth import login,logout, authenticate
 from django.contrib import messages
 from .forms import RegistroForm  
+from django.urls import reverse
+from django.shortcuts import redirect
+from django.contrib.auth.decorators import user_passes_test
+from django.contrib.auth.forms import AuthenticationForm
 
 
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -58,8 +62,21 @@ def logear(request):
 
 
 
+def Administrador(request):
+    if request.method == "POST":
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get("username")
+            password = form.cleaned_data.get("password")
+            usuario = authenticate(request=request, username=username, password=password)
+            if usuario is not None:
+                login(request, usuario)
+                admin_url = reverse('admin:index')
+                return redirect(admin_url)
+            else:
+                messages.error(request, "Usuario no válido")
+        else:
+            messages.error(request, "Información no válida")
 
-
-
-
-
+    form = AuthenticationForm()
+    return render(request, "login/loginM.html", {"form": form})
